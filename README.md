@@ -8,6 +8,10 @@ OpenStreetMap wiki about gas stations in Slovenia: https://wiki.openstreetmap.or
 
 Output in format for [OSM Conflator](https://wiki.openstreetmap.org/wiki/OSM_Conflator)
 
+## Preview
+<iframe height="500" width="100%" frameborder="0" src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/openstreetmap-si/petrol-osm-import/master/petrol-si-changes.geojson" title="petrol-si-changes.geojson"></iframe>
+
+## Running
 Requirements: python and pip
 
 Run via GNU `make`, using the included [Makefile](Makefile), which:
@@ -19,9 +23,13 @@ Run via GNU `make`, using the included [Makefile](Makefile), which:
     * filters the nodes to Slovenia only (via the is_in tag) - it can easily be adapted for other countries
     * Fetches all the individual gas station pages for exact opening times (using mapping in [openingtimes.yaml](openingtimes.yaml))
       Requests are cached aggressively in webcache.sqlite, so make sure to delete it when you want to scrape fresh data, typically the last time before import
+    * generates file `petrol-si-scraped.json`
 
 
-4. Executes [OSM conflator](https://wiki.openstreetmap.org/wiki/OSM_Conflator) with [petrol-si-profile.py](petrol-si-profile.py)
+4. Executes [OSM conflator](https://wiki.openstreetmap.org/wiki/OSM_Conflator) with [petrol-si-profile.py](petrol-si-profile.py) and generates 
+    * `existingdata.osm` - existing data from OpenStreetMap
+    * `petrol-si.osm` - osmChange file for import (do **not** import anything until community approval!!!)
+    * [petrol-si-changes.geojson](petrol-si-changes.geojson) - proposed changes preview, in git only for easy preview and diff history
 
 
 
@@ -29,6 +37,7 @@ Scraper is expecting javascript lines with data in format:
 
     createMarker(new google.maps.LatLng(45.1234567800,15.8765432100), '<div>marker html</div>', ' tag one tag two tag three ', 1);
 
+## Status
 This **exercise** is a work in progress, not yet fully ready for use.
 Still **TODO**:
 * add leading zeros to opening_hours
