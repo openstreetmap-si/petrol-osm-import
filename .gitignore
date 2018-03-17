@@ -5,4 +5,4 @@ webcache.sqlite
 petrol-si-scraped.json
 petrol-si.osm 
 existingdata.osm
-petrol-si-changes.geojson
+#petrol-si-changes.geojson
