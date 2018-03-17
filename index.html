@@ -1,0 +1,24 @@
+<html>
+    <head>
+    </head>
+    <body style="margin:0;">
+        <nav style="background: #888;text-align:center;">
+            <a href="https://github.com/openstreetmap-si/petrol-osm-import" style="color:white;font-size:24px;">petrol-osm-import</a> - data from petrol.si and OpenStreetMap.org
+        </nav>
+        <script src="https://embed.github.com/view/geojson/openstreetmap-si/petrol-osm-import/master/petrol-si-changes.geojson?height=500&amp;width=888"></script>
+        <script type="text/javascript">
+        var checkExist = setInterval(function() {
+            var iframeElement = document.getElementsByTagName("iframe");
+            var hElement = document.getElementsByTagName("nav");
+            console.log(hElement);
+            if (iframeElement.length > 0) {
+                iframeElement[0].setAttribute("style", "height: calc(100% - " + hElement[0].offsetHeight + "px); bottom:0");
+                iframeElement[0].setAttribute("width", "100%");
+                iframeElement[0].removeAttribute("height");
+                // iframeElement[0].setAttribute("height", "100%");
+                clearInterval(checkExist);
+            }
+            }, 100); // check every 100ms
+        </script>
+    </body>
+<html>

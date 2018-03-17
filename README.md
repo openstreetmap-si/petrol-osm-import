@@ -1,15 +1,13 @@
-# Preparation of gas station data from Petrol.si for import into OpenStreetmap.org
+# Petrol.si gas stations for OpenStreetMap.org
 
-Scrapes the Petrol fuel and charging station data from http://www.petrol.si/bencinski-servisi/zemljevid into a format suitable for importing into [OpenStreetMap](https://www.openstreetmap.org).
+Scrapes the [map on petrol.si](https://www.petrol.si/bencinski-servisi/zemljevid) for their fuel and charging station data and converts it to a format suitable for importing into [OpenStreetMap](https://www.openstreetmap.org), while preserving existing data.
 
 [![Build Status](https://travis-ci.org/openstreetmap-si/petrol-osm-import.svg?branch=master)](https://travis-ci.org/openstreetmap-si/petrol-osm-import)
 
-OpenStreetMap wiki about gas stations in Slovenia: https://wiki.openstreetmap.org/wiki/WikiProject_Slovenia/Storitve#Bencinske_.C4.8Drpalke
+[OpenStreetMap wiki about gas stations in Slovenia](https://wiki.openstreetmap.org/wiki/WikiProject_Slovenia/Storitve#Bencinske_.C4.8Drpalke)
 
-Output in format for [OSM Conflator](https://wiki.openstreetmap.org/wiki/OSM_Conflator)
-
-## Preview
-<iframe height="500" width="100%" frameborder="0" src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/openstreetmap-si/petrol-osm-import/master/petrol-si-changes.geojson" title="petrol-si-changes.geojson"></iframe>
+## Result preview
+Full-screen preview of the derived changes is available [here](https://openstreetmap-si.github.io/petrol-osm-import/)
 
 ## Running
 Requirements: python and pip
@@ -18,7 +16,7 @@ Run via GNU `make`, using the included [Makefile](Makefile), which:
 1. Prepares the python virtual environment
 2. Installs all needed dependencies as defined in [requirements.txt](requirements.txt)
 3. Executes scraping using [scrape-petrol.py](scrape-petrol.py), which
-    * Fetches http://www.petrol.si/bencinski-servisi/zemljevid 
+    * Fetches [https://www.petrol.si/bencinski-servisi/zemljevid](https://www.petrol.si/bencinski-servisi/zemljevid) 
     * Tags the nodes as defined in  [tags-mapping.yaml](tags-mapping.yaml)
     * filters the nodes to Slovenia only (via the is_in tag) - it can easily be adapted for other countries
     * Fetches all the individual gas station pages for exact opening times (using mapping in [openingtimes.yaml](openingtimes.yaml))
@@ -28,7 +26,7 @@ Run via GNU `make`, using the included [Makefile](Makefile), which:
 
 4. Executes [OSM conflator](https://wiki.openstreetmap.org/wiki/OSM_Conflator) with [petrol-si-profile.py](petrol-si-profile.py) and generates 
     * `existingdata.osm` - existing data from OpenStreetMap
-    * `petrol-si.osm` - osmChange file for import (do **not** import anything until community approval!!!)
+    * `petrol-si.osm` - osmChange file for import (do **NOT** import anything until community approval!!!)
     * [petrol-si-changes.geojson](petrol-si-changes.geojson) - proposed changes preview, in git only for easy preview and diff history
 
 
