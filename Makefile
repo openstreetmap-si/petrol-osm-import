@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 petrol-si.osm: requirements petrol-si-scraped.json
 	# run the conflate of scraped json in the virtual environment with all the requirements met
 	source venv/bin/activate; \
