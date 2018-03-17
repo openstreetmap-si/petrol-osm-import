@@ -1,0 +1,203 @@
+# tags from the side menu with mappings to OpenStreetMap tags
+
+# Servis:
+Non Stop:
+    opening_hours: 24/7
+Bencinski servis ob AC:
+    #not really possible to map, just give it a dummy ta to not warn about it
+    amenity: fuel
+Trenutno odprti:
+Marina:
+    waterway: fuel
+
+# Gorivo:
+Tesla električna polnilnica:
+    amenity: charging_station
+    fuel: electric
+    fuel:electric: "yes"
+    socket:tesla_supercharger: "yes"
+    fixme: "socket:tesla_supercharger should have exact count of tesla sockets"
+Vodik:
+    amenity: fuel
+    fuel:LH2: "yes"
+Q Max 95:
+    amenity: fuel
+    fuel:octane_95: "yes"
+Plavi diesel:
+    amenity: fuel
+    fuel:diesel: "yes"
+Euro diesel:
+    amenity: fuel
+    fuel:diesel: "yes"
+Električna polnilnica:
+    amenity: charging_station
+    fuel: electric
+    fuel:electric: "yes"
+Q Max 100:
+    amenity: fuel
+    fuel:octane_100: "yes"
+Q Max Diesel:
+    amenity: fuel
+    fuel:diesel: "yes"
+Q Max LPG:
+    amenity: fuel
+    fuel:lpg: "yes"
+AdBlue:
+    amenity: fuel
+    fuel:adblue: "yes"
+Petromat:
+
+# Za vozilo:
+Avtomatska avtopralnica:
+    car_wash: "yes"
+    car_wash:automated: "yes"
+Ročna avtopralnica:
+    car_wash: "yes"
+Pranje avtopreprog:
+Sesalec:
+    vacuum_cleaner: "yes"
+Menjava motornega olja:
+
+# Ponudba na servisih:
+Pošta:
+    amenity: post_office
+    post_office:type: post_partner
+Negotovinski terminal športne stave:
+Mlekomat:
+    amenity: vending_machine
+    vending: milk
+Svetovanje - energenti:
+Hot Spot: # Brezžično polnjenje mobilnih telefonov
+Bike Box: # Servisno stojalo za popravilo koles - https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_repair_station
+    amenity: bicycle_repair_station
+Informacijski kiosk:
+Točenje kurilnega olja:
+    amenity: fuel
+    fuel:taxfree_diesel: "yes"
+Poštni nabiralnik:
+    amenity: post_box
+Točenje petroleja:
+    amenity: fuel
+    fuel:kerosene: "yes"
+Urbana:
+Foto na poti:
+Plin v jeklenkah:
+    shop: gas
+Fax:
+    service:fax: "yes"
+Sprejem tuje gotovine:
+Bankomat:
+    atm: "yes"
+Javna telefonska govorilnica:
+    service:phone: "yes"
+Gotovinski terminal športne stave:
+Prodaja vinjet za avstrijske AC:
+Prodaja vinjet za madžarske AC:
+WIFI:
+    internet_access: wlan
+
+# Prehrana:
+Fresh:
+www.efresh.si:
+Čaj na poti:
+    # amenity: vending_machine
+    # vending: tea
+    drink: tea
+Kava na poti:
+    # amenity: vending_machine
+    # vending: coffee
+    drink: coffee
+Trgovine Hip Hop:
+    shop: convenience
+Marché restavracija:
+Restavracija:
+Kruh in pekovsko pecivo ter sveži in topli prigrizki:
+Bar:
+    drink: "yes"
+Topli kotiček:
+
+# Prostori:
+Tuš:
+    shower: "yes"
+WC s plačilom:
+    toilets: "yes"
+    toilets:fee: "yes"
+Sončna elektrarna:
+Prostor za počitek:
+Otroška igrala:
+Previjalna mizica:
+    diaper: "yes"
+WC za invalide:
+    toilets: "yes"
+    toilets:wheelchair: "yes"
+Oskrba avtodomov:
+Rekreacijske površine:
+
+# Plačilne kartice:
+# https://wiki.openstreetmap.org/wiki/DE:Key:payment
+IDS:
+    payment:ids: "yes"
+E100:
+    payment:e100: "yes"
+CLUB AVTO:
+    payment:club-avto: "yes" # none yet in OSM
+Eurotoll - LogPay:
+    payment:eurotoll: "yes"
+    payment:logpay: "yes"
+ARIS:
+    payment:aris: "yes" # none yet in OSM!
+AS24:
+    payment:as24: "yes"
+DKV:
+    payment:dkv: "yes"
+UTA:
+    payment:uta: "yes"
+Euroshell:
+    payment:euroshell: "yes"
+INFORKOM:
+    payment:inforkom: "yes"
+M-OIL:
+    payment:m-oil: "yes" # none yet in OSM!
+Red pan Card:
+    payment:red-pan-card: "yes" # none yet in OSM
+
+
+# Slovenija:
+Južna in zahodna Slovenija:
+    is_in: SI
+Osrednja in severna Slovenija:
+    is_in: SI
+Vzhodna Slovenija:
+    is_in: SI
+
+# Hrvaška:
+Hrvaška:
+    is_in: HR
+Istra in Hrvaško primorje:
+    is_in: HR
+Severno zahodna Hrvaška:
+    is_in: HR
+Zagreb in Osrednja Hrvaška:
+    is_in: HR
+Dalmacija:
+    is_in: HR
+Vzhodna Hrvaška:
+    is_in: HR
+Lika in Gorski kotar:
+    is_in: HR
+
+# Črna gora:
+Črna gora:
+    is_in: ME
+
+# Bosna in Hercegovina:
+Bosna in Hercegovina:
+    is_in: BA
+
+# Kosovo:
+Kosovo:
+    is_in: KX
+
+# Srbija:
+Srbija:
+    is_in: RS

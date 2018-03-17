@@ -1,0 +1,17 @@
+# Mappings for opening times
+# wiki: https://wiki.openstreetmap.org/wiki/Key:opening_hours
+# examples: https://taginfo.openstreetmap.org/keys/opening_hours#values
+
+vsak dan: Mo-Su
+vsak delavnik: Mo-Fr
+vsak delovni ponedeljek: Mo
+vsak delovni torek: Tu
+vsako delovno sredo: We
+vsak delovni četrtek: Th
+vsak delovni petek: Fr
+sobote: Sa
+nedelje in prazniki: Su
+holidays: Su # for http://www.petrol.si/bencinski-servisi/podrobno/4033
+
+#already from overview page:
+#odprto\nNON-STOP: 24/7 

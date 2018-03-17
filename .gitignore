@@ -1,0 +1,8 @@
+requirements.txt.out
+venv
+webcache.sqlite
+*.pyc
+petrol-si-scraped.json
+petrol-si.osm 
+existingdata.osm
+petrol-si-changes.geojson
