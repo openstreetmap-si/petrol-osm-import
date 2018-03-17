@@ -13,7 +13,7 @@ query = [('amenity', '~fuel|charging_station')]
 # Use bbox from dataset points (default). False = query whole world, [minlat, minlon, maxlat, maxlon] to override
 bbox = True
 # How close OSM point should be to register a match, in meters. Default is 100
-max_distance = 100
+max_distance = 50
 # Delete objects that match query tags but not dataset? False is the default
 delete_unmatched = False
 # If set, and delete_unmatched is False, modify tags on unmatched objects instead
