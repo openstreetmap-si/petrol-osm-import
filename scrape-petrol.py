@@ -27,7 +27,7 @@ def main(outpath):
             print(exc)
     # print(json.dumps(openingTimesMapping, indent=2))
 
-    base_url = "http://www.petrol.si"
+    base_url = "https://www.petrol.si"
     url = base_url + "/bencinski-servisi/zemljevid"
     print("Scraping: " + url, file=sys.stderr)
     try:
@@ -52,7 +52,7 @@ def main(outpath):
     if "Hrvaška" not in menuTags:
         menuTags.append("Hrvaška")
 
-    # longest tags first
+    # longest tags first to avoid partial matches
     menuTags.sort(key = len, reverse=True)
     # menuTags.sort()
     # for m in menuTags:
@@ -97,7 +97,6 @@ def main(outpath):
                 lon = m.group(2)
                 markerHtml = m.group(3)
                 markerTagsStr = m.group(4)
-                markerTagsStr = markerTagsStr.replace("Trenutno odprti", "").replace("zaprto", "").replace("* Aktiven", "").replace("Array", "").replace("   ", " ").replace("  ", " ").strip()
                 markerSoup = BeautifulSoup(markerHtml, "html.parser")
                 name = "Petrol " + markerSoup.select_one("h2 a").text
                 website = base_url + markerSoup.select_one("h2 a")["href"]
@@ -107,14 +106,23 @@ def main(outpath):
                 # basic object:
                 node = { "id": int(float(id)), "lat": float(lat), "lon": float(lon), "tags": { "name": name, "contact:website": website, "brand": "Petrol", "brand:wikidata": "Q174824",  "phone": str(phone) } }
 
-                # extra tags
-                # unmatchedTagStr = markerTagsStr
+                # tags on marker:
                 markerTags = []
                 for t in menuTags:
                     if t in markerTagsStr:
                         markerTags.append(t)
 
-                unmatchedTagsStr = markerTagsStr
+                # Remove some time-dependant tags:
+                if "Trenutno odprti" in markerTags:
+                    markerTags.remove("Trenutno odprti")
+                if "* Aktiven" in markerTags:
+                    markerTags.remove("* Aktiven")
+                if "Array" in markerTags:
+                    markerTags.remove("Array")
+
+                markerTags.sort()
+
+                unmatchedTags = markerTags.copy()
 
                 for kt in markerTags:
                     if kt in tag_map_dict:
@@ -127,11 +135,11 @@ def main(outpath):
                                 else:
                                     # print(f"setting {tag_map_dict[kt][key]} to {node['tags'][key]}")
                                     node["tags"][key] = tag_map_dict[kt][key]
-                            unmatchedTagsStr = unmatchedTagsStr.replace(kt, "").replace("  ", " ").strip()
+                            unmatchedTags.remove(kt)
 
-                node["tags"]["zzz_AllSourceTags"] = ";".join(markerTags)
-                if unmatchedTagsStr:
-                    node["tags"]["description"] = "Not tagged: " + unmatchedTagsStr
+                node["tags"]["petrol_si:source_tags"] = ";".join(markerTags)
+                if unmatchedTags:
+                    node["tags"]["petrol_si:source_tags:unmatched"] = ";".join(unmatchedTags)
 
                 if "amenity" not in node["tags"]:
                     continue
@@ -158,7 +166,7 @@ def main(outpath):
                 for dsc, hrs in zip(openingTimeStrings, openingTimeStrings):
                     # print(dsc, hrs)
                     if dsc in openingTimesMapping:
-                        openingTime = openingTime + openingTimesMapping[dsc] + " " + hrs.replace(" ", "") + "; "
+                        openingTime = openingTime + openingTimesMapping[dsc] + " " + hrs.replace(" ", "").zfill(11) + "; "
                     elif dsc == "odprto" and hrs == "NON-STOP":
                         openingTime = "24/7"
                     else:
