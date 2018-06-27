@@ -38,7 +38,7 @@ Scraper is expecting javascript lines with data in format:
 ## Status
 This **exercise** is a work in progress, not yet fully ready for use.
 Still **TODO**:
-* [ ] add leading zeros to opening_hours
+* [x] add leading zeros to opening_hours
 * [ ] scrape phone, fax and address
 * [ ] get approval from data owners (they do publish simpler datasets for gps devices) they will most likely be ok with it, as it is in their best interest to be on the map
 * [ ] get community approval 
