@@ -20,7 +20,7 @@ requirements.txt.out: venv requirements.txt
 venv:
 	# basic setup
 	pip install virtualenv
-	virtualenv venv
+	virtualenv -p /usr/bin/python3 venv
 
 test: petrol-si-scraped.json
 	wc -l petrol-si-scraped.json

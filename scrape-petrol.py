@@ -165,7 +165,7 @@ def main(outpath):
                         errors = errors + 1
                         print("Unknown opening time", dsc, hrs, file=sys.stderr)
                         print("Page: ", website, file=sys.stderr)
-                
+
                 openingTime = openingTime.strip("; ")
                 # print(openingTime)
 
@@ -183,7 +183,7 @@ def main(outpath):
         if outpath:
             with open(outpath, 'w') as outfile:
                 json.dump(nodes, outfile, indent=2, sort_keys=True)
-            print(f"Wrote json with {len(nodes)} nodes to: {outpath}", file=sys.stderr)
+            print("Wrote json with {} nodes to: {}".format(len(nodes), outpath), file=sys.stderr)
         else:
             json.dump(nodes, sys.stdout, indent=2, sort_keys=True)
             print()
@@ -192,13 +192,14 @@ def main(outpath):
         print("ERROR: script not found!", file=sys.stderr)
         errors = errors + 1
 
-    print (f"Scraped: {i} nodes, {errors} errors.", file=sys.stderr)
+    print ("Scraped: {} nodes, {} errors.".format(i, errors), file=sys.stderr)
 
     # set the errorlevel
     exit(errors)
 
 
 if __name__ == '__main__':
+    print ("Running with Python version: " + sys.version)
     if len(sys.argv) > 1:
         main(outpath=sys.argv[1])
     else:
