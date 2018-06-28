@@ -195,10 +195,10 @@ def main(outpath):
 
         if outpath:
             with open(outpath, 'w') as outfile:
-                json.dump(nodes, outfile, indent=2, sort_keys=True)
+                json.dump(nodes, outfile, indent=2, sort_keys=True, ensure_ascii=False)
             print("Wrote json with {} nodes to: {}".format(len(nodes), outpath), file=sys.stderr)
         else:
-            json.dump(nodes, sys.stdout, indent=2, sort_keys=True)
+            json.dump(nodes, sys.stdout, indent=2, sort_keys=True, ensure_ascii=False)
             print()
 
     else:
