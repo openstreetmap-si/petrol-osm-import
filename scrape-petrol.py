@@ -103,8 +103,13 @@ def main(outpath):
                 id = website.rpartition("/")[2]
                 phone = markerSoup.select_one("ul.contact li strong").text
 
+                # remove spaces in the last part (after area code) of the phone number
+                phone = str(phone)
+                phonePrefix = " ".join(phone.split(" ", 2)[:2])
+                phone = phonePrefix + " " + phone.replace(phonePrefix, "").replace(" ", "")
+
                 # basic object:
-                node = { "id": int(float(id)), "lat": float(lat), "lon": float(lon), "tags": { "name": name, "contact:website": website, "brand": "Petrol", "brand:wikidata": "Q174824",  "phone": str(phone) } }
+                node = { "id": int(float(id)), "lat": float(lat), "lon": float(lon), "tags": { "name": name, "contact:website": website, "brand": "Petrol", "brand:wikidata": "Q174824",  "contact:phone": phone } }
 
                 # tags on marker:
                 markerTags = []
