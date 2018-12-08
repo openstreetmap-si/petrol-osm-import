@@ -3,6 +3,7 @@
 Scrapes the [map on petrol.si](https://www.petrol.si/bencinski-servisi/zemljevid) for their fuel and charging station data and converts it to a format suitable for importing into [OpenStreetMap](https://www.openstreetmap.org), while preserving existing data.
 
 [![Build Status](https://travis-ci.org/openstreetmap-si/petrol-osm-import.svg?branch=master)](https://travis-ci.org/openstreetmap-si/petrol-osm-import)
+[![Requirements Status](https://requires.io/github/openstreetmap-si/petrol-osm-import/requirements.svg?branch=master)](https://requires.io/github/openstreetmap-si/petrol-osm-import/requirements/?branch=master)
 
 [OpenStreetMap wiki about gas stations in Slovenia](https://wiki.openstreetmap.org/wiki/WikiProject_Slovenia/Storitve#Bencinske_.C4.8Drpalke)
 
