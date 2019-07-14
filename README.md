@@ -5,6 +5,8 @@ Scrapes the [map on petrol.si](https://www.petrol.si/bencinski-servisi/zemljevid
 [![Build Status](https://travis-ci.org/openstreetmap-si/petrol-osm-import.svg?branch=master)](https://travis-ci.org/openstreetmap-si/petrol-osm-import)
 [![Requirements Status](https://requires.io/github/openstreetmap-si/petrol-osm-import/requirements.svg?branch=master)](https://requires.io/github/openstreetmap-si/petrol-osm-import/requirements/?branch=master)
 
+Note: this is currently broken due to sourece website changes. New source starting point could be a [JSON endpoint](https://www.petrol.si/restservices/sales-service/filterStores?lngFrom=13.261230157575028&lngTo=16.702697442731278&latFrom=45.36648596761669&latTo=46.919187463685276&types=).
+
 [OpenStreetMap wiki about gas stations in Slovenia](https://wiki.openstreetmap.org/wiki/WikiProject_Slovenia/Storitve#Bencinske_.C4.8Drpalke)
 
 ## Result preview
