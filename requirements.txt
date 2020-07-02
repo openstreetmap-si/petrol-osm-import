@@ -2,7 +2,7 @@ astroid==2.2.5
 beautifulsoup4==4.7.1
 certifi==2019.6.16
 chardet==3.0.4
-idna==2.8
+idna==2.10
 isort==4.3.21
 kdtree==0.16
 lazy-object-proxy==1.4.1
