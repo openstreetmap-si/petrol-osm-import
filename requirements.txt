@@ -9,7 +9,7 @@ lazy-object-proxy==1.4.1
 mccabe==0.6.1
 osm-conflate==1.4.1
 pylint==2.3.1
-PyYAML==5.1.1
+PyYAML==5.3.1
 requests==2.22.0
 requests-cache==0.5.0
 six==1.12.0
