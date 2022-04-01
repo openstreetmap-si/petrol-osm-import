@@ -14,6 +14,6 @@ requests==2.22.0
 requests-cache==0.5.0
 six==1.12.0
 tqdm==4.32.2
-urllib3==1.25.3
+urllib3==1.26.9
 virtualenv==16.6.2
 wrapt==1.11.2
