@@ -1,4 +1,4 @@
-astroid==2.2.5
+astroid==2.12.5
 beautifulsoup4==4.7.1
 certifi==2019.6.16
 chardet==3.0.4
