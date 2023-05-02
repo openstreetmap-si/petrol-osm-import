@@ -1,7 +1,7 @@
 astroid==2.15.*
 beautifulsoup4==4.12.*
 certifi==2022.12.*
-chardet==3.0.*
+chardet==5.1.*
 idna==2.8
 isort==4.3.*
 kdtree==0.16
