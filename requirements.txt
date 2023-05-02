@@ -13,7 +13,7 @@ PyYAML==5.1.*
 requests==2.29.*
 requests-cache==1.0.*
 six==1.12.*
-tqdm==4.32.*
+tqdm==4.65.*
 urllib3==2.0.*
 virtualenv==20.23.*
 wrapt==1.11.*
