@@ -3,7 +3,7 @@ beautifulsoup4==4.12.*
 certifi==2022.12.*
 chardet==3.0.*
 idna==2.8
-isort==4.3.*
+isort==5.12.*
 kdtree==0.16
 lazy-object-proxy==1.9.*
 mccabe==0.6.*
