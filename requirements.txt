@@ -5,7 +5,7 @@ chardet==3.0.*
 idna==2.8
 isort==4.3.*
 kdtree==0.16
-lazy-object-proxy==1.4.*
+lazy-object-proxy==1.9.*
 mccabe==0.6.*
 osm-conflate==1.4.1
 pylint==2.17.*
