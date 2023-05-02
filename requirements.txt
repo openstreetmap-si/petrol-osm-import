@@ -10,7 +10,7 @@ mccabe==0.6.*
 osm-conflate==1.4.1
 pylint==2.3.*
 PyYAML==5.1.*
-requests==2.22.*
+requests==2.29.*
 requests-cache==0.5.*
 six==1.12.*
 tqdm==4.32.*
