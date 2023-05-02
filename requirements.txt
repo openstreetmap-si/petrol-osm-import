@@ -6,7 +6,7 @@ idna==2.8
 isort==5.12.*
 kdtree==0.16
 lazy-object-proxy==1.9.*
-mccabe==0.6.*
+mccabe==0.7.*
 osm-conflate==1.4.1
 pylint==2.17.*
 PyYAML==6.0
