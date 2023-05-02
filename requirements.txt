@@ -1,5 +1,5 @@
 astroid==2.2.*
-beautifulsoup4==4.7.*
+beautifulsoup4==4.12.*
 certifi==2022.12.*
 chardet==3.0.*
 idna==2.8
