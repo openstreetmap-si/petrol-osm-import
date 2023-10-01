@@ -1,4 +1,4 @@
-astroid==2.15.*
+astroid==3.0.*
 beautifulsoup4==4.12.*
 certifi==2023.7.*
 chardet==5.1.*
